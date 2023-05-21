@@ -1,4 +1,4 @@
-import Dexie, { Table } from "dexie";
+import Dexie from "dexie";
 
 export class Database extends Dexie {
   // constructor() {
