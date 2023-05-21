@@ -1,0 +1,101 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Text component renders correctly 1`] = `
+.c0 {
+  margin: 0;
+  font: inherit;
+  font-family: Montserrat,"Helvetica Neue","Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans",BlinkMacSystemFont,-apple-system,sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #fc76a1;
+}
+
+<p
+  className="c0"
+  color="primary"
+>
+  Text
+</p>
+`;
+
+exports[`Text component renders heading 1 1`] = `
+.c0 {
+  margin: 0;
+  font: inherit;
+  font-family: Montserrat,"Helvetica Neue","Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans",BlinkMacSystemFont,-apple-system,sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: inherit;
+}
+
+<h1
+  className="c0"
+>
+  Text
+</h1>
+`;
+
+exports[`Text component renders heading 2 styled as heading 3 1`] = `
+.c0 {
+  margin: 0;
+  font: inherit;
+  font-family: HirukoProBook;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  color: inherit;
+}
+
+<h2
+  className="c0"
+>
+  Text
+</h2>
+`;
+
+exports[`Text component renders heading 3, styled as heading 4, and primaryGradientMedium color 1`] = `
+.c0 {
+  margin: 0;
+  font: inherit;
+  font-family: Montserrat,"Helvetica Neue","Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans",BlinkMacSystemFont,-apple-system,sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: #f669aa;
+}
+
+<h3
+  className="c0"
+  color="primaryGradientMedium"
+>
+  Text
+</h3>
+`;
+
+exports[`Text component renders heading 4, styled as heading 5, primary color, and aligned to the right 1`] = `
+.c0 {
+  margin: 0;
+  font: inherit;
+  font-family: Montserrat,"Helvetica Neue","Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans",BlinkMacSystemFont,-apple-system,sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: right;
+  color: #fc76a1;
+}
+
+<h4
+  align="right"
+  className="c0"
+  color="primary"
+>
+  Text
+</h4>
+`;
