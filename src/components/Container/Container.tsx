@@ -1,10 +1,10 @@
 import * as Styled from "./Container.styles";
 
-export interface IContainer {
+export interface ContainerProps {
   children?: React.ReactNode;
 }
 
-export const Container: React.FC<IContainer> = ({
+export const Container: React.FC<ContainerProps> = ({
   children,
   ...rest
 }) => (

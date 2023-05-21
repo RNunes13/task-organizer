@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import * as Typographies from "@/theme/mixins/Typography";
-import type { ITextProps, TYPOGRAPHIES } from "./Text.interfaces";
+import type { TextProps, TYPOGRAPHIES } from "./Text.interfaces";
 import type { TypographyType } from "@/theme/mixins/Typography";
 
-export const TextComponent = styled.p<ITextProps & { $styleAs?: TYPOGRAPHIES }>`
+export const TextComponent = styled.p<TextProps & { $styleAs?: TYPOGRAPHIES }>`
   margin: 0;
   font: inherit;
 
