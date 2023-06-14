@@ -27,6 +27,7 @@ module.exports = {
   moduleNameMapper: {
     "\\.svg$": "<rootDir>/__mocks__/svg.tsx",
     "^@/(.*)$": "<rootDir>/src/$1",
+    '^dexie$': require.resolve('dexie'),
   },
   coverageDirectory: "coverage",
   collectCoverageFrom: [
