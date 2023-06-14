@@ -1,6 +1,7 @@
 import styled from "styled-components";
-import { grid } from "@/theme/mixins/Grid";
+import { GridSizes } from "@/theme/mixins/Grid";
+import * as Grids from "@/theme/mixins/Grid";
 
-export const Container = styled.div`
-  ${grid()}
+export const Container = styled.div<{ grid?: GridSizes }>`
+  ${({ grid }) => Grids[grid ?? "grid1440"]()}
 `;

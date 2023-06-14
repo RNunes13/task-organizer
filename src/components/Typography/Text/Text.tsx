@@ -9,5 +9,3 @@ export const Text: FC<TextProps> = ({ as, tag, styleAs, ...rest }) => (
 Text.defaultProps = {
   tag: 'p'
 };
-
-export default Text;

@@ -2,6 +2,7 @@ import { createContext, useContext, useMemo, useReducer } from "react";
 import { ThemeProvider } from "styled-components";
 import { AppStateReducer } from "./App.reducer";
 import { getTheme } from "@/theme";
+import { db } from "@/database";
 import type { AppContextProps } from "./App.interfaces";
 
 export interface AppProviderProps {
@@ -9,6 +10,7 @@ export interface AppProviderProps {
 }
 
 export const AppContext = createContext<AppContextProps>({
+  db,
   themeMode: "dark",
   searchTerm: null,
   dispatch: () => null,
@@ -25,8 +27,10 @@ export const AppProvider: React.FC<AppProviderProps> = ({ children }) => {
     [appState.themeMode]
   );
 
+  const contextValue = { ...appState, db, dispatch };
+
   return (
-    <AppContext.Provider value={{ ...appState, dispatch }}>
+    <AppContext.Provider value={contextValue}>
       <ThemeProvider theme={theme}>{children}</ThemeProvider>
     </AppContext.Provider>
   );

@@ -1,6 +1,8 @@
+import type { Database } from "@/database";
 import type { ThemeModeType } from "@/theme";
 
 export interface AppContextProps {
+  db: Database;
   themeMode: ThemeModeType;
   searchTerm: string | null;
   dispatch: React.Dispatch<AppReducerActions<StateActions>>;

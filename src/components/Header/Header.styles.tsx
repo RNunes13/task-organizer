@@ -11,11 +11,12 @@ export const Header = styled.header`
   top: 0;
   height: ${HEIGHT}px;
   z-index: ${({ theme }) => theme.index.top};
+  box-shadow: 0 0 10px 0px ${({ theme }) => theme.colors.base_90};
+  backdrop-filter: blur(5px);
   background: rgba(
-    ${({ theme }) => HexToRgb(theme.colors.bodyBg).toString()},
+    ${({ theme }) => HexToRgb(theme.colors.base_90).toString()},
     0.85
   );
-  backdrop-filter: blur(5px);
 `;
 
 export const Wrapper = styled(Container)`
@@ -49,13 +50,14 @@ export const SearchInput = styled(InputText)<{ $searching?: boolean }>`
   transform: scaleX(1);
   transform-origin: right;
 
-  ${({ $searching }) => !$searching && `
+  ${({ $searching }) =>
+    !$searching &&
+    `
     width: 0;
     opacity: 0;
     visibility: hidden;
     transform: scaleX(0);
   `}
-`
-
-export const SearchButton = styled(Button)`
 `;
+
+export const SearchButton = styled(Button)``;

@@ -32,6 +32,13 @@ const GlobalStyle = createGlobalStyle`
     -ms-touch-action: manipulation;
   }
 
+  ul, li {
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    list-style: none;
+  }
+
   #root {
     min-height: 100vh;
     display: flex;

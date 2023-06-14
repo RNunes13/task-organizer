@@ -1,12 +1,31 @@
-import { useAppContext } from "@/app/App.provider";
-import { Text } from "@/components/Typography/Text/Text";
+import { useLiveQuery } from "dexie-react-hooks";
+import { db } from "@/database";
+import { Task } from "@/models/Task/Task";
+import { Tasks } from "@/models/Task/Tasks";
+import * as Styled from "./Home.styles";
 
 function Home() {
-  const { searchTerm } = useAppContext();
+  const tasks =
+    useLiveQuery(async () => {
+      const list = await db.tasks.toArray();
+      const { tasks } = new Tasks(list);
+      return tasks;
+    }) || [];
+
+  const [pending, completed] = tasks.reduce(
+    (acc, cur) => {
+      const index = cur.completed ? 1 : 0;
+      acc[index].push(cur);
+      return acc;
+    },
+    [[] as Task[], [] as Task[]]
+  );
+
   return (
     <>
-      <Text styleAs="h0" align="center">Taks Organizer</Text>
-      {!!searchTerm && <Text>Search: {searchTerm}</Text>}
+      <Styled.AddTask />
+      <Styled.Tasks title="Tasks" list={pending} />
+      <Styled.CompletedTasks title="Completed" list={completed} />
     </>
   );
 }

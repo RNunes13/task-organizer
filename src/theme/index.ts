@@ -197,7 +197,7 @@ const theme: IThemeProps = {
   radius: {
     sm: '8px',
     md: '12px',
-    lg: '20px',
+    lg: '16px',
   },
   index: {
     base: 0,

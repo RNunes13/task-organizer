@@ -1,6 +1,8 @@
 import { IMixinProps } from '@/theme';
 import { xSmall, small } from './Breakpoint';
 
+export type GridSizes = 'grid1440' | 'grid1024';
+
 const gridBase = () => (props: IMixinProps): string => `
   width: 100%;
   box-sizing: border-box;
@@ -22,9 +24,14 @@ const gridBase = () => (props: IMixinProps): string => `
   }
 `;
 
-export const grid = () => (props: IMixinProps): string => `
+export const grid1440 = () => (props: IMixinProps): string => `
   ${gridBase()(props)}
-  max-width: 1350px;
+  max-width: 1440px;
+`;
+
+export const grid1024 = () => (props: IMixinProps): string => `
+  ${gridBase()(props)}
+  max-width: 1024px;
 `;
 
 export const grid12 = () => (props: IMixinProps): string => `
